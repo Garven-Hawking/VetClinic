@@ -24,7 +24,7 @@
                     <img class="logo" src="../images/logo.png" alt="">
                 </a>
                 <a class="header_right" href = "">войти</a>
-                <a class="header_right" href = "">регистрация</a>
+                <a class="header_right" href = "#popup">Авторизация</a>
             </div>
         </div>
     </header>
@@ -372,6 +372,35 @@
             </div>
         </div>
     </footer>
+
+    <div id="popup">
+        <div class="popup_body">
+            <a class="popup_close" href="#">X</a>
+            <div class="popup_title">
+                Авторизация
+            </div>
+            <nav class="popup_tabs">
+                <a href="#log_in" class="login_tab">
+                    Войти
+                </a>
+                <a href="#sign_up" class="signup_tab">
+                    Зарегистрироваться
+                </a>
+            </nav>
+
+            <form class="popup_form">
+                <label class="popup_label">E-mail</label><br>
+                <input class="popup_input" type="text" placeholder="Введите почту" name="login"><br>
+                <label class="popup_label">Пароль</label><br>
+                <input class="popup_input" type="password" placeholder="Введите пароль" name="password">
+            </form>
+            <div class="popup_buttons">
+                <div class="btn" id="log_in"><button type="submit">Войти</button></div>
+                <div class="btn" id="sign_up"><button type="submit">Зарегистрироваться</button></div>
+            </div>
+
+        </div>
+    </div>
 
     <script src="../src/jquery-3.6.0.min.js"></script>
     <script src="../src/slick.min.js"></script>
