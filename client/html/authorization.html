@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../styles/Golos-Text_Bold.css">
+    <link rel="stylesheet" href="../styles/slick.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/authorizationStyles.css">
+</head>
+<body>
+    <header class = "header">
+        <div class = "container">
+            <div class="header_padding">
+                <a href="index.html">
+                    <img class="logo" src="../images/logo.png" alt="">
+                </a>
+                <a class="header_right" href = "">войти</a>
+                <a class="header_right" href = "/authorization">Авторизация</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="popup">
+        <div class="popup_body">
+            <div class="popup_title">
+                Авторизация
+            </div>
+            <nav class="popup_tabs">
+                <a href="" class="login_tab">
+                    Войти
+                </a>
+                <a href="" class="signup_tab">
+                    Зарегистрироваться
+                </a>
+            </nav>
+
+            <form class="popup_form">
+                <label class="popup_label">E-mail</label><br>
+                <input class="popup_input" type="text" placeholder="Введите почту" name="login"><br>
+                <label class="popup_label">Пароль</label><br>
+                <input class="popup_input" type="password" placeholder="Введите пароль" name="password">
+            </form>
+            <div class="popup_buttons">
+                <div class="btn"><button type="submit">Войти</button></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../src/jquery-3.6.0.min.js"></script>
+    <script src="../src/slick.min.js"></script>
+    <script src="../src/main.js"></script>
+</body>
+</html>

@@ -4,109 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>hospetal</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="../styles/Golos-Text_Bold.css">
     <link rel="stylesheet" href="../styles/slick.css">
-<!--    <link rel="stylesheet" href="../styles/slick-theme.css">-->
-
-
+    <link rel="stylesheet" href="../styles/commonStyles.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/authorizationStyles.css">
 </head>
 <body>
     <header class = "header">
         <div class = "container">
             <div class="header_padding">
-                <a href="index.html">
-                    <img class="logo" src="../images/logo.png" alt="">
+                <a href="/">
+                    <img class="logo" src="../images/logo_hospetal.png" alt="">
                 </a>
-                <a class="header_right" href = "">войти</a>
-                <a class="header_right" href = "#popup">Авторизация</a>
+                <button id="authorization_button" class="header_right" >Авторизация</button>
             </div>
         </div>
     </header>
 
+    <div id="authorization_modal" class="modal">
+        <div class="popup_body">
+            <div class="popup_title">
+                Авторизация
+            </div>
+            <button id="authorization_modal_close_button" class="authorization_modal_close">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">
+                    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/>
+                </svg>
+            </button>
+            <nav class="popup_tabs">
+                <button id="login_tab_button" class="login_tab active">
+                    Войти
+                </button>
+                <button id="signup_tab_button" class="signup_tab">
+                    Зарегистрироваться
+                </button>
+            </nav>
+
+            <form  class="popup_form ">
+                <label class="popup_label">E-mail</label><br>
+                <input class="popup_input" type="text" placeholder="Введите почту" name="email"><br>
+                <label class="popup_label">Пароль</label><br>
+                <input class="popup_input" type="password" placeholder="Введите пароль" name="password">
+                <input id="authorization_type" type="hidden" name="authorization_type" value="login">
+                <button id="authorization_confirm_button" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
     <section class = "first_section">
         <div class="container">
-            <div class="sections_padding">
-                <div class="first_section_title">
-                    Заботиться - наша профессия
-                </div>
-                <div class="first_section_text">
-                    -25% на первый прием
-                </div>
-                <div >
-                    <a class="first_section_button" href="#">ЗАПИСАТЬСЯ</a>
-                </div>
+            <div class="first_section_title">
+                Заботиться - наша профессия
+            </div>
+            <div class="first_section_text">
+                -25% на первый прием
+            </div>
+            <div >
+                <a class="first_section_button" href="#">ЗАПИСАТЬСЯ</a>
             </div>
         </div>
     </section>
 
     <section class="about_us">
         <div class="container">
-            <div class="sections_padding">
-                <div class="about_us_text">
-                    О нас
-                </div>
-                <div class="about_us_content">
-                    <div class="about_us_content_text">
-                        <div class="about_us_inner_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                        </div>
+            <div class="about_us_text">
+                О нас
+            </div>
+            <div class="about_us_content">
+                <div class="about_us_content_text">
+                    <div class="about_us_inner_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                     </div>
-                    <div class="about_us_content_image"></div>
                 </div>
+                <div class="about_us_content_image"></div>
             </div>
         </div>
     </section>
 
     <section class="why_us">
         <div class="container">
-            <div class="sections_padding">
-                <div class="why_us_text">
-                    Почему мы?
+            <div class="why_us_text">
+                Почему мы?
+            </div>
+            <div class="why_us_content">
+                <div class="why_us_inner_content">
+                    <div class="why_us_inner_content_image">
+                        <img src="../images/heart.png">
+                    </div>
+                    <div class="why_us_inner_content_title">
+                        Заботимся
+                    </div>
+                    <div class="why_us_inner_content_text">
+                        Для наших врачей помогать животным не просто работа,
+                        а призвание и дело всей жизни.
+                    </div>
                 </div>
-                <div class="why_us_content">
-                    <div class="why_us_inner_content">
-                        <div class="why_us_inner_content_image">
-                            <img src="../images/heart.png">
-                        </div>
-                        <div class="why_us_inner_content_title">
-                            Заботимся
-                        </div>
-                        <div class="why_us_inner_content_text">
-                            Для наших врачей помогать животным не просто работа,
-                            а призвание и дело всей жизни.
-                        </div>
+                <div class="why_us_inner_content">
+                    <div class="why_us_inner_content_image">
+                        <img src="../images/dollar.png">
                     </div>
-                    <div class="why_us_inner_content">
-                        <div class="why_us_inner_content_image">
-                            <img src="../images/dollar.png">
-                        </div>
-                        <div class="why_us_inner_content_title">
-                            Низкие цены
-                        </div>
-                        <div class="why_us_inner_content_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                        </div>
+                    <div class="why_us_inner_content_title">
+                        Низкие цены
                     </div>
-                    <div class="why_us_inner_content">
-                        <div class="why_us_inner_content_image">
-                            <img src="../images/24hours.png">
-                        </div>
-                        <div class="why_us_inner_content_title">
-                            Работаем 24/7
-                        </div>
-                        <div class="why_us_inner_content_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                        </div>
+                    <div class="why_us_inner_content_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="why_us_inner_content">
+                    <div class="why_us_inner_content_image">
+                        <img src="../images/24hours.png">
+                    </div>
+                    <div class="why_us_inner_content_title">
+                        Работаем 24/7
+                    </div>
+                    <div class="why_us_inner_content_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
                     </div>
                 </div>
             </div>
@@ -115,81 +137,79 @@
 
     <section class="services">
         <div class="container">
-            <div class="sections_padding">
-                <div class="services_text">
-                    Услуги
+            <div class="services_text">
+                Услуги
+            </div>
+            <div class="services_content">
+                <div class="services_content_box">
+                    <img class="services_content_box_image"
+                         src="../images/stethoscope.png">
+                    <div class="services_content_box_title">
+                        Терапия
+                    </div>
+                    <div class="services_content_box_text">
+                        Сбор анамнеза, составление плана
+                        диагностических иследований,
+                        назначение симптоматического лечения.
+                    </div>
+                    <div >
+                        <a class="services_content_box_button"
+                           href="#">ЗАПИСАТЬСЯ</a>
+                    </div>
                 </div>
-                <div class="services_content">
-                    <div class="services_content_box">
-                        <img class="services_content_box_image"
-                             src="../images/stethoscope.png">
-                        <div class="services_content_box_title">
-                            Терапия
-                        </div>
-                        <div class="services_content_box_text">
-                            Сбор анамнеза, составление плана
-                            диагностических иследований,
-                            назначение симптоматического лечения.
-                        </div>
-                        <div >
-                            <a class="services_content_box_button"
-                               href="#">ЗАПИСАТЬСЯ</a>
-                        </div>
+                <div class="services_content_box">
+                    <img class="services_content_box_image"
+                         src="../images/scalpel.png">
+                    <div class="services_content_box_title">
+                        Хирургия
                     </div>
-                    <div class="services_content_box">
-                        <img class="services_content_box_image"
-                             src="../images/scalpel.png">
-                        <div class="services_content_box_title">
-                            Хирургия
-                        </div>
-                        <div class="services_content_box_text">
-                            Сбор анамнеза, составление плана
-                            диагностических иследований,
-                            назначение симптоматического лечения.
-                        </div>
-                        <div >
-                            <a class="services_content_box_button"
-                               href="#">ЗАПИСАТЬСЯ</a>
-                        </div>
+                    <div class="services_content_box_text">
+                        Сбор анамнеза, составление плана
+                        диагностических иследований,
+                        назначение симптоматического лечения.
                     </div>
-                    <div class="services_content_box">
-                        <img class="services_content_box_image"
-                             src="../images/syringe.png">
-                        <div class="services_content_box_title">
-                            Вакцинация
-                        </div>
-                        <div class="services_content_box_text">
-                            Сбор анамнеза, составление плана
-                            диагностических иследований,
-                            назначение симптоматического лечения.
-                        </div>
-                        <div >
-                            <a class="services_content_box_button"
-                               href="#">ЗАПИСАТЬСЯ</a>
-                        </div>
+                    <div >
+                        <a class="services_content_box_button"
+                           href="#">ЗАПИСАТЬСЯ</a>
                     </div>
-                    <div class="services_content_box">
-                        <img class="services_content_box_image"
-                             src="../images/broken_bone.png">
-                        <div class="services_content_box_title">
-                            Травматология
-                        </div>
-                        <div class="services_content_box_text">
-                            Сбор анамнеза, составление плана
-                            диагностических иследований,
-                            назначение симптоматического лечения.
-                        </div>
-                        <div >
-                            <a class="services_content_box_button"
-                               href="#">ЗАПИСАТЬСЯ</a>
-                        </div>
+                </div>
+                <div class="services_content_box">
+                    <img class="services_content_box_image"
+                         src="../images/syringe.png">
+                    <div class="services_content_box_title">
+                        Вакцинация
                     </div>
-                    <div class="services_content_box">
-                        <img class="services_content_box_image"
-                             src="../images/nav_arrow.png">
-                        <div class="services_content_box_title">
-                            Другие услуги
-                        </div>
+                    <div class="services_content_box_text">
+                        Сбор анамнеза, составление плана
+                        диагностических иследований,
+                        назначение симптоматического лечения.
+                    </div>
+                    <div >
+                        <a class="services_content_box_button"
+                           href="#">ЗАПИСАТЬСЯ</a>
+                    </div>
+                </div>
+                <div class="services_content_box">
+                    <img class="services_content_box_image"
+                         src="../images/broken_bone.png">
+                    <div class="services_content_box_title">
+                        Травматология
+                    </div>
+                    <div class="services_content_box_text">
+                        Сбор анамнеза, составление плана
+                        диагностических иследований,
+                        назначение симптоматического лечения.
+                    </div>
+                    <div >
+                        <a class="services_content_box_button"
+                           href="#">ЗАПИСАТЬСЯ</a>
+                    </div>
+                </div>
+                <div class="services_content_box">
+                    <img class="services_content_box_image"
+                         src="../images/nav_arrow.png">
+                    <div class="services_content_box_title">
+                        Другие услуги
                     </div>
                 </div>
             </div>
@@ -198,88 +218,86 @@
 
     <section class="our_team">
         <div class="container">
-            <div class="our_team_sections_padding">
-                <div class="our_team_title">
-                    Наша команда
+            <div class="our_team_title">
+                Наша команда
+            </div>
+            <div class="team_slider">
+                <div>
+                    <div class="team_slider_box">
+                        <div class="team_slider_image_box">
+                            <img class="team_slider_box_image"
+                                 src="../images/doctor1.png">
+                        </div>
+                        <div class="team_slider_box_text">
+                            <div class="team_slider_box_main_text">
+                                Екатерина Петрова
+                            </div>
+                            <div class="team_slider_box_sub_text">
+                                Ветеринар-дерматолог
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team_slider">
-                    <div>
-                        <div class="team_slider_box">
-                            <div class="team_slider_image_box">
-                                <img class="team_slider_box_image"
-                                     src="../images/doctor1.png">
+                <div>
+                    <div class="team_slider_box">
+                        <div class="team_slider_image_box">
+                            <img class="team_slider_box_image"
+                                 src="../images/doctor2.png">
+                        </div>
+                        <div class="team_slider_box_text">
+                            <div class="team_slider_box_main_text">
+                                Валерий Андреев
                             </div>
-                            <div class="team_slider_box_text">
-                                <div class="team_slider_box_main_text">
-                                    Екатерина Петрова
-                                </div>
-                                <div class="team_slider_box_sub_text">
-                                    Ветеринар-дерматолог
-                                </div>
+                            <div class="team_slider_box_sub_text">
+                                Ветеринар-терапевт
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="team_slider_box">
-                            <div class="team_slider_image_box">
-                                <img class="team_slider_box_image"
-                                     src="../images/doctor2.png">
+                </div>
+                <div>
+                    <div class="team_slider_box">
+                        <div class="team_slider_image_box">
+                            <img class="team_slider_box_image"
+                                 src="../images/doctor3.png">
+                        </div>
+                        <div class="team_slider_box_text">
+                            <div class="team_slider_box_main_text">
+                                Анастасия Журавлева
                             </div>
-                            <div class="team_slider_box_text">
-                                <div class="team_slider_box_main_text">
-                                    Валерий Андреев
-                                </div>
-                                <div class="team_slider_box_sub_text">
-                                    Ветеринар-терапевт
-                                </div>
+                            <div class="team_slider_box_sub_text">
+                                Ветеринар-хирург
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="team_slider_box">
-                            <div class="team_slider_image_box">
-                                <img class="team_slider_box_image"
-                                     src="../images/doctor3.png">
+                </div>
+                <div>
+                    <div class="team_slider_box">
+                        <div class="team_slider_image_box">
+                            <img class="team_slider_box_image"
+                                 src="../images/doctor4.png">
+                        </div>
+                        <div class="team_slider_box_text">
+                            <div class="team_slider_box_main_text">
+                                Алексей Гаврилов
                             </div>
-                            <div class="team_slider_box_text">
-                                <div class="team_slider_box_main_text">
-                                    Анастасия Журавлева
-                                </div>
-                                <div class="team_slider_box_sub_text">
-                                    Ветеринар-хирург
-                                </div>
+                            <div class="team_slider_box_sub_text">
+                                Ветеринар-онколог
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="team_slider_box">
-                            <div class="team_slider_image_box">
-                                <img class="team_slider_box_image"
-                                     src="../images/doctor4.png">
-                            </div>
-                            <div class="team_slider_box_text">
-                                <div class="team_slider_box_main_text">
-                                    Алексей Гаврилов
-                                </div>
-                                <div class="team_slider_box_sub_text">
-                                    Ветеринар-онколог
-                                </div>
-                            </div>
+                </div>
+                <div>
+                    <div class="team_slider_box">
+                        <div class="team_slider_image_box">
+                            <img class="team_slider_box_image"
+                                 src="../images/doctor5.png">
                         </div>
-                    </div>
-                    <div>
-                        <div class="team_slider_box">
-                            <div class="team_slider_image_box">
-                                <img class="team_slider_box_image"
-                                     src="../images/doctor5.png">
+                        <div class="team_slider_box_text">
+                            <div class="team_slider_box_main_text">
+                                Дмитрий Гончаров
                             </div>
-                            <div class="team_slider_box_text">
-                                <div class="team_slider_box_main_text">
-                                    Дмитрий Гончаров
-                                </div>
-                                <div class="team_slider_box_sub_text">
-                                    Ветеринар-кардиолог
-                                </div>
+                            <div class="team_slider_box_sub_text">
+                                Ветеринар-кардиолог
                             </div>
                         </div>
                     </div>
@@ -288,119 +306,99 @@
         </div>
     </section>
 
-    <section class="contacts">
-        <div class="container">
-            <div class="sections_padding">
-                <div class="contacts_title">
-                    Контакты
-                </div>
-                <div class="contacts_content">
-                    <div class="contacts_map">
-                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6159.811772953345!2d49.103828908864976!3d55.816904192938466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415952b33beafe4b%3A0xf3992a64b4163218!2sVeterinarnaya%20Klinika%20911%20Na%20Chistopol&#39;skoy%207!5e0!3m2!1sen!2sru!4v1652293371508!5m2!1sen!2sru"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="contacts_text">
-                        <div class="contacts_text_content">
-                            <div class="contacts_text_logo">
-                                <div class="contacts_text_logo_image">
-                                    <img src="../images/logo_white.png">
-                                </div>
-                            </div>
-                            <div class="contacts_text_address">
-                                <div class="contacts_text_logo_image">
-                                    <img src="../images/map.png">
-                                </div>
-                                <div class="contacts_text_address_text">
-                                    Москва, ул. Пушкина 27
-                                </div>
 
-                            </div>
-                            <div class="contacts_text_phone">
-                                <div class="contacts_text_logo_image">
-                                    <img src="../images/phone.png">
-                                </div>
-                                <div class="contacts_text_phone_text">
-                                    555-123-45-68
-                                </div>
-                            </div>
-                            <div class="contacts_text_email">
-                                <div class="contacts_text_logo_image">
-                                    <img src="../images/email.png">
-                                </div>
-                                <div class="contacts_text_email_text">
-                                    info@hospetal.ru
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer class="footer">
-        <div class="footer_content">
-            <div class="footer_logo">
-                <img src="../images/logo_white.png" >
-            </div>
-            <div class="footer_email">
-                <form class="footer_email_form" action="">
-                    <label class="footer_email_label">
-                        Подпишитесь на рассылку новостей
-                    </label>
-                    <br>
-                    <input class="footer_email_input"
-                           type="text" value="e-mail">
-                    <input class="footer_email_button"
-                           type="submit" value="ОТПРАВИТЬ">
-                </form>
-            </div>
-            <div class="footer_social_net">
-                <div class="social_net_label">Подпишитесь на нас в соцсетях</div>
-                <div class="social_net_logos">
-                    <div >
-                        <a href=""><img class="social_net_logo" src="../images/instagram.svg" alt=""></a>
+
+        <div class="contacts">
+            <div class="container">
+                <div class="sections_padding">
+                    <div class="contacts_title">
+                        Контакты
                     </div>
-                    <div>
-                        <a href=""><img class="social_net_logo" src="../images/twitter.svg" alt=""></a>
-                    </div>
-                    <div>
-                        <a href=""><img class="social_net_logo" src="../images/vk.svg" alt=""></a>
+                    <div class="contacts_content">
+                        <div class="contacts_map">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6159.811772953345!2d49.103828908864976!3d55.816904192938466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415952b33beafe4b%3A0xf3992a64b4163218!2sVeterinarnaya%20Klinika%20911%20Na%20Chistopol&#39;skoy%207!5e0!3m2!1sen!2sru!4v1652293371508!5m2!1sen!2sru"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contacts_text">
+                            <div class="contacts_text_content">
+                                <div class="contacts_text_logo">
+                                    <div class="contacts_text_logo_image">
+                                        <img src="../images/logo_white.png">
+                                    </div>
+                                </div>
+                                <div class="contacts_text_address">
+                                    <div class="contacts_text_logo_image">
+                                        <img src="../images/map.png">
+                                    </div>
+                                    <div class="contacts_text_address_text">
+                                        Москва, ул. Пушкина 27
+                                    </div>
+
+                                </div>
+                                <div class="contacts_text_phone">
+                                    <div class="contacts_text_logo_image">
+                                        <img src="../images/phone.png">
+                                    </div>
+                                    <div class="contacts_text_phone_text">
+                                        555-123-45-68
+                                    </div>
+                                </div>
+                                <div class="contacts_text_email">
+                                    <div class="contacts_text_logo_image">
+                                        <img src="../images/email.png">
+                                    </div>
+                                    <div class="contacts_text_email_text">
+                                        info@hospetal.ru
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="footer_content_wrapper">
+            <div class="footer_content">
+                <div class="footer_logo">
+                    <img src="../images/logo_white.png" >
+                </div>
+                <div class="footer_email">
+                    <form class="footer_email_form" action="">
+                        <label class="footer_email_label">
+                            Подпишитесь на рассылку новостей
+                        </label>
+                        <br>
+                        <input class="footer_email_input"
+                               type="text" value="e-mail">
+                        <input class="footer_email_button"
+                               type="submit" value="ОТПРАВИТЬ">
+                    </form>
+                </div>
+                <div class="footer_social_net">
+                    <div class="social_net_label">Подпишитесь на нас в соцсетях</div>
+                    <div class="social_net_logos">
+                        <div >
+                            <a href=""><img class="social_net_logo" src="../images/instagram.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img class="social_net_logo" src="../images/twitter.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img class="social_net_logo" src="../images/vk.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
     </footer>
 
-    <div id="popup">
-        <div class="popup_body">
-            <a class="popup_close" href="#">X</a>
-            <div class="popup_title">
-                Авторизация
-            </div>
-            <nav class="popup_tabs">
-                <a href="#log_in" class="login_tab">
-                    Войти
-                </a>
-                <a href="#sign_up" class="signup_tab">
-                    Зарегистрироваться
-                </a>
-            </nav>
 
-            <form class="popup_form">
-                <label class="popup_label">E-mail</label><br>
-                <input class="popup_input" type="text" placeholder="Введите почту" name="login"><br>
-                <label class="popup_label">Пароль</label><br>
-                <input class="popup_input" type="password" placeholder="Введите пароль" name="password">
-            </form>
-            <div class="popup_buttons">
-                <div class="btn" id="log_in"><button type="submit">Войти</button></div>
-                <div class="btn" id="sign_up"><button type="submit">Зарегистрироваться</button></div>
-            </div>
-
-        </div>
-    </div>
 
     <script src="../src/jquery-3.6.0.min.js"></script>
     <script src="../src/slick.min.js"></script>
