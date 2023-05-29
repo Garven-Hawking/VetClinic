@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hospetal</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../styles/Golos-Text_Bold.css">
+    <link rel="stylesheet" href="../styles/slick.css">
+    <link rel="stylesheet" href="../styles/commonStyles.css">
+    <link rel="stylesheet" href="../styles/clientPageStyles.css">
+    <link rel="stylesheet" href="../styles/petAddingDialogStyles.css">
+</head>
+<body>
+    <header class = "header">
+        <div class = "container">
+            <div class="header_padding">
+                <a id="main_logo" href="/">
+                    <img class="logo" src="../images/logo_hospetal.png" alt="">
+                </a>
+                <a href="/clientPage" id="client_page_button" class="header_right" >Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="pet_adding_modal" class="modal">
+        <div class="popup_body">
+            <div class="popup_title">
+                Добавьте питомца
+            </div>
+            <button id="pet_adding_modal_close_button" class="pet_adding_modal_close">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">
+                    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/>
+                </svg>
+            </button>
+            <form  class="popup_form ">
+                <label class="popup_label">Имя</label><br>
+                <input id="pet_name_input" class="popup_input" type="text" placeholder="Введите имя питомца" name="pet_name" required><br>
+                <label class="popup_label">Какое животное</label><br>
+                <select class="popup_input" id="animal_type_select" name="animal_type">
+
+                </select>
+                <label class="popup_label">Возраст</label><br>
+                <input id="pet_age_input" class="popup_input" type="text" placeholder="Введите возраст" name="pet_age" required>
+                <label class="popup_label">Пол</label><br>
+                <select class="popup_input" id="pet_sex_select" name="pet_sex">
+                    <option>Мужской</option>
+                    <option>Женский</option>
+                </select>
+                <label class="popup_label">Фото</label><br><br>
+                <label for="pet_pic_input" class="file_upload_button">Загрузить</label><br>
+                <input id="pet_pic_input" type="file" accept="image/*" name="pet_pic" required>
+                <button id="pet_adding_confirm_button" type="submit">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="top_section">
+        <div class="container">
+            <div class="client_and_pets">
+                <div class="client_info">
+                    <div class="client_name title">
+                        NoName
+                    </div>
+                    <div class="client_picture">
+                        <img class="client_pic" src="../images/account.png" alt="">
+                    </div>
+                </div>
+                <div class="pets">
+                    <div class="pets_title title">
+                        Ваши питомцы
+                    </div>
+                    <div class="pets_container">
+                        <button id="add_pet_button" class="add_pet">
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../src/jquery-3.6.0.min.js"></script>
+    <script src="../src/clientPageScripts.js"></script>
+    <script src="../src/commonScripts.js"></script>
+</body>
+</html>
